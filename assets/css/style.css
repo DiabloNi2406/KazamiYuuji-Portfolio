@@ -807,4 +807,54 @@ nav.navbar.bootsnav .navbar-toggle i{color: #f92c2c;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
-/*========================Thank you=================
+/*========================Thank you================*/
+
+
+
+/* Snake Game Section */
+.snake-game {
+    padding: 50px 0;
+    text-align: center;
+    background: #f9fbfd;
+}
+
+.snake-game h2 {
+    font-size: 24px;
+    color: #01212E;
+    margin-bottom: 20px;
+}
+
+#gameCanvas {
+    border: 2px solid #01212E;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-controls {
+    margin-top: 20px;
+}
+
+.game-controls .default-btn {
+    background: #ff3636;
+    color: #fff;
+    border: 1px solid #ff3636;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.game-controls .default-btn:hover {
+    background: #01212E;
+    border-color: #01212E;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+}
