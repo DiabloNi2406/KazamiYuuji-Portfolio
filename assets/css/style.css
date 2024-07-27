@@ -866,7 +866,7 @@ h1 {
     
 input[type="number"] {
     padding: 10px;
-    margin: 30px 0;
+    margin: 60px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: calc(100% - 22px);
@@ -876,9 +876,8 @@ input[type="number"] {
 }
     
 button {
-    margin-top: 30px;
+    margin-top: 1px;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     background-color: #01212E;
     color: #00F0FF;
@@ -902,7 +901,7 @@ button:hover {
 
 .top-wrapper {
     width: 90vmin;
-    height: 55vmin;
+    height: 59vmin;
     background-color: #01212E;
     margin-left: auto;
     margin-right: auto;
