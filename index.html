@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="Vie">
+<html class="no-js" lang="eng">
 
     <head>
         <!-- meta data -->
@@ -7,12 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Snake Game</title>
-		<link rel="stylesheet" href="./assets/css/style.css">
-		<link rel="stylesheet" href="./assets/css/responsive.css">
-	
+		
+		<!-- game data -->
+		<link rel="stylesheet" href="style.css">
+		<script src="./assets/js/script.js"></script>
         <!-- title of site -->
         <title>My Portfolio</title>
 
@@ -83,6 +81,7 @@
 			                    <li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
 			                    <li class="smooth-menu"><a href="#clients">clients</a></li>
 			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
+								<li class="smooth-menu"><a href="#game">game</a></li>
 			                </ul><!--/.nav -->
 			            </div><!-- /.navbar-collapse -->
 			        </div><!--/.container-->
@@ -101,7 +100,7 @@
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<div class="header-text">
-							<h2>Hi, I'm <br> Lê Hoàng <br> Bảo Lân <br> You can call me <br> "Kazami Yuuji". </h2>
+							<h2>Hi, I'm <br> Lê Hoàng <br> Bảo Lân.</h2>
 							<p> I'm a web designer </p>
 							<a href="assets/download/browney.txt" download>download resume</a>
 						</div><!--/.header-text-->
@@ -123,10 +122,11 @@
 						<div class="col-sm-6">
 							<div class="single-about-txt">
 								<h3>
+
 									Hi, I'm a professional web designer with over 2 years of experience in creating visually appealing and user-friendly websites. My passion for design and dedication to delivering exceptional digital experiences have driven me to work on a wide range of projects, from small business websites to large-scale e-commerce platforms.
 								</h3>
 								<p>
-									My approach to web design is centered around understanding my clients' needs and translating their vision into a functional and aesthetically pleasing website. I believe in open communication and collaboration throughout the design process to ensure that the final product not only meets but exceeds expectations. ,<br>
+									My approach to web design is centered around understanding my clients' needs and translating their vision into a functional and aesthetically pleasing website. I believe in open communication and collaboration throughout the design process to ensure that the final product not only meets but exceeds expectations.<br>
 									There are two foreign languages that I know is Japanese and English.
 								</p>
 								<div class="row">
@@ -404,8 +404,8 @@
 					</div><!--.experience-content-->
 			</div>
 
-		</section><!--/.experience-->
-		<!--experience end -->
+		</section>
+		
 
 		<!--profiles start -->
 		<section id="profiles" class="profiles">
@@ -742,22 +742,36 @@
 		</section><!--/.contact-->
 		<!--contact end -->
 
-
-		<section>
-			<h1>Trò Chơi Nhấp Chuột</h1>
-			<div id="gameArea">
-				<div id="target"></div>
+		<!--game begin -->
+		<section id="game" class="game"></section>
+		<div class="#box1">
+			<div class="top-wrapper">
+				<div style="text-align: center;">
+					<h1>Number Guessing Game</h1>
+					<div class="p1">
+						<p>I have selected a number between 1 and 100. Try to guess the number!</p>
+					</div>
+				</div>
+				<div style="text-align: center;">
+					<input type="number" id="guessInput" placeholder="Enter your guess">
+				</div>
+				<div style="text-align: center;"> 
+					<button onclick="checkGuess()">Guess</button>
+				</div>
+				<p id="feedback"></p>
 			</div>
-			<div id="score">Điểm: 0</div>
+		</div>
+	
+		<script src="script.js"></script>
 		</section>
-		<script src="./assets/js/script.js"></script>
-
+	
+		<!--footer begin -->
 		<footer id="footer-copyright" class="footer-copyright">
 			<div class="container">
 				<div class="hm-footer-copyright text-center">
-					<p>
-						&copy; copyright Lê Hoàng Bảo Lân. design and developed by <a href="https://www.themesine.com/">themesine</a>
-					</p>
+						<p>
+							&copy; copyright Lê Hoàng Bảo Lân. design and developed by <a href="https://www.themesine.com/">themesine</a>
+						</p>
 				</div>
 			</div>
 

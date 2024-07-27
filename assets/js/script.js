@@ -1,24 +1,23 @@
-const target = document.getElementById('target');
-const scoreDisplay = document.getElementById('score');
-let score = 0;
+let numberToGuess = Math.floor(Math.random() * 100) + 1;
+let attempts = 0;
 
-function moveTarget() {
-    const gameArea = document.getElementById('gameArea');
-    const maxX = gameArea.clientWidth - target.offsetWidth;
-    const maxY = gameArea.clientHeight - target.offsetHeight;
+function checkGuess() {
+    const guessInput = document.getElementById('guessInput');
+    const feedback = document.getElementById('feedback');
+    const guess = Number(guessInput.value);
     
-    const newX = Math.random() * maxX;
-    const newY = Math.random() * maxY;
-    
-    target.style.left = `${newX}px`;
-    target.style.top = `${newY}px`;
+    attempts++;
+
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+        feedback.textContent = 'Please enter a valid number between 1 and 100.';
+        return;
+    }
+
+    if (guess < numberToGuess) {
+        feedback.textContent = 'Too low! Try again.';
+    } else if (guess > numberToGuess) {
+        feedback.textContent = 'Too high! Try again.';
+    } else {
+        feedback.textContent = `Congratulations! You guessed the number in ${attempts} attempts.`;
+    }
 }
-
-target.addEventListener('click', () => {
-    score++;
-    scoreDisplay.textContent = `Điểm: ${score}`;
-    moveTarget();
-});
-
-// Đặt target ở vị trí ngẫu nhiên khi trang được tải
-moveTarget();
