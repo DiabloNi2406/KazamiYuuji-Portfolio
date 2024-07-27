@@ -1,5 +1,6 @@
-// Basic Snake Game Code
-const canvas = document.getElementById('snakeCanvas');
+// script.js
+
+const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const box = 32;
 let snake = [];
@@ -13,6 +14,7 @@ let score = 0;
 
 document.addEventListener('keydown', direction);
 document.getElementById('startGame').addEventListener('click', startGame);
+document.getElementById('stopGame').addEventListener('click', stopGame);
 
 function direction(event) {
   if (event.keyCode == 37 && d != 'RIGHT') d = 'LEFT';
@@ -75,6 +77,7 @@ function collision(head, array) {
   return false;
 }
 
+let game;
 function startGame() {
   d = '';
   snake = [];
@@ -85,4 +88,8 @@ function startGame() {
   };
   score = 0;
   game = setInterval(draw, 100);
+}
+
+function stopGame() {
+  clearInterval(game);
 }
